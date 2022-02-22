@@ -3,9 +3,28 @@
     <h2>Search</h2>
     <hr />
     <ul class="list-group">
-      <li class="list-group-item">By Country</li>
-      <li class="list-group-item">By Region</li>
-      <li class="list-group-item">By Capital</li>
+      <li
+        routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="list-group-item"
+      >
+        Search By Country
+      </li>
+      <li
+        routerLink="/region"
+        routerLinkActive="active"
+        class="list-group-item"
+      >
+        By Region
+      </li>
+      <li
+        routerLink="/capital"
+        routerLinkActive="active"
+        class="list-group-item"
+      >
+        By Capital
+      </li>
     </ul>
   </div>
   <div class="col">
