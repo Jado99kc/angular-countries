@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 import { debounceTime, Subject } from 'rxjs';
 
@@ -8,6 +8,7 @@ import { debounceTime, Subject } from 'rxjs';
   styles: [],
 })
 export class CountriesInputComponent implements OnInit {
+  @Input() placeholder: string = '';
   @Output() onEnter: EventEmitter<string> = new EventEmitter();
   @Output() onDebounce: EventEmitter<string> = new EventEmitter();
 
